@@ -2,6 +2,9 @@
 from pdfminer.high_level import extract_text
 from preprocess import clean_text
 
+# function to extract text from resume PDF
+# used for further NLP processing
+
 
 # function to read resume PDF and return text
 def extract_resume_text(pdf_path):
