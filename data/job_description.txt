@@ -6,3 +6,7 @@ Machine Learning
 Data Analysis
 Git
 SQL
+Docker
+AWS
+Kubernetes
+React
