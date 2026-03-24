@@ -1,4 +1,4 @@
-Software Engineer
+We are looking for an Embedded Software Engineer with experience in C, Python, RTOS, Linux, and microcontrollers.
 
 Skills required:
 Python
