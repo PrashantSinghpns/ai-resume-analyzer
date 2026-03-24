@@ -25,3 +25,14 @@ src/ -> core ML logic
 app/ -> web interface
 models/ -> saved models
 notebooks/ -> experiments
+
+## Progress
+
+Day 1
+Project setup
+
+Day 2
+Resume PDF text extraction
+
+Day 3
+Text preprocessing using NLTK

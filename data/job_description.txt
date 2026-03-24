@@ -1,0 +1,8 @@
+Software Engineer
+
+Skills required:
+Python
+Machine Learning
+Data Analysis
+Git
+SQL

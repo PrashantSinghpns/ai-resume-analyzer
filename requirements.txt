@@ -1,8 +1,9 @@
+#requirements of tools and libraries
+
 pandas
 numpy
 scikit-learn
 nltk
-spacy
 streamlit
 sentence-transformers
 pdfminer.six
