@@ -1,32 +1,57 @@
-# import function to extract text from PDF
+# Import libraries
 from pdfminer.high_level import extract_text
 from preprocess import clean_text
-
-# function to extract text from resume PDF
-# used for further NLP processing
+from job_matcher import calculate_similarity
 
 
-# function to read resume PDF and return text
+# Function to extract text from resume PDF
 def extract_resume_text(pdf_path):
-    text = extract_text(pdf_path)   # extract all text from the pdf
-    return text
+    try:
+        text = extract_text(pdf_path)
+        return text
+    except Exception as e:
+        print("Error reading resume:", e)
+        return ""
 
 
-# main program
+# Function to read job description
+def read_job_description(path):
+    try:
+        with open(path, "r", encoding="utf-8") as file:
+            return file.read()
+    except Exception as e:
+        print("Error reading job description:", e)
+        return ""
+
+
+# Main program
 if __name__ == "__main__":
 
-    # path to the sample resume
+    # file paths
     resume_path = "data/Resume_sample.pdf"
+    job_path = "data/job_description.txt"
 
-    # call the function
+    # extract resume text
     resume_text = extract_resume_text(resume_path)
 
-    # # print extracted text
-    # print("Resume Text:\n")
-    # print(resume_text)
-    
+    if not resume_text:
+        print("Resume text could not be extracted.")
+        exit()
 
-    cleaned = clean_text(resume_text)
+    # clean resume text
+    cleaned_resume = clean_text(resume_text)
 
     print("\nCleaned Resume Text:\n")
-    print(cleaned)
+    print(cleaned_resume[:500])  # show first 500 characters
+
+    # read job description
+    job_text = read_job_description(job_path)
+
+    if not job_text:
+        print("Job description not found.")
+        exit()
+
+    # calculate similarity score
+    score = calculate_similarity(cleaned_resume, job_text)
+
+    print("\nResume Match Score:", round(score * 100, 2), "%")
