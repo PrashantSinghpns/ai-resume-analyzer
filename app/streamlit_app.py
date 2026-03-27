@@ -1,10 +1,7 @@
 import streamlit as st
-import os
-import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
 from pdfminer.high_level import extract_text
-from preprocess import clean_text
-from job_matcher import calculate_similarity
+from src.preprocess import clean_text
+from src.job_matcher import calculate_similarity
 
 
 st.title("AI Resume Analyzer")

@@ -1,5 +1,4 @@
 # Import libraries
-import os
 from pdfminer.high_level import extract_text
 from preprocess import clean_text
 from job_matcher import calculate_similarity
@@ -15,7 +14,7 @@ def extract_resume_text(pdf_path):
         return ""
 
 
-# Function to read job description
+# Function to read job description file
 def read_job_description(path):
     try:
         with open(path, "r", encoding="utf-8") as file:
@@ -28,32 +27,30 @@ def read_job_description(path):
 # Main program
 if __name__ == "__main__":
 
-    # file paths
-    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-    resume_path = os.path.join(project_root, "data", "Resume_sample.pdf")
-    job_path = os.path.join(project_root, "data", "job_description.txt")
+    resume_path = "data/Resume_sample.pdf"
+    job_path = "data/job_description.txt"
 
-    # extract resume text
+    # Extract resume text
     resume_text = extract_resume_text(resume_path)
 
     if not resume_text:
         print("Resume text could not be extracted.")
         exit()
 
-    # clean resume text
+    # Clean resume text
     cleaned_resume = clean_text(resume_text)
 
     print("\nCleaned Resume Text:\n")
-    print(cleaned_resume[:500])  # show first 500 characters
+    print(cleaned_resume[:500])  # show first 500 characters only
 
-    # read job description
+    # Read job description
     job_text = read_job_description(job_path)
 
     if not job_text:
         print("Job description not found.")
         exit()
 
-    # calculate similarity score
+    # Calculate similarity score
     score = calculate_similarity(cleaned_resume, job_text)
 
     print("\nResume Match Score:", round(score * 100, 2), "%")

@@ -40,3 +40,4 @@ Text preprocessing using NLTK
 ## How to Run
 
 streamlit run app/streamlit_app.py
+
