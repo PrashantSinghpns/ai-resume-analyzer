@@ -1,7 +1,11 @@
 import re
 from nltk.corpus import stopwords
 
-stop_words = set(stopwords.words('english'))
+try:
+    stop_words = set(stopwords.words("english"))
+except LookupError:
+    # Keep preprocessing usable even when NLTK data has not been downloaded yet.
+    stop_words = set()
 
 def clean_text(text):
 

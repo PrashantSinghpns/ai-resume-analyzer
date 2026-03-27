@@ -1,4 +1,5 @@
 # Import libraries
+import os
 from pdfminer.high_level import extract_text
 from preprocess import clean_text
 from job_matcher import calculate_similarity
@@ -28,8 +29,9 @@ def read_job_description(path):
 if __name__ == "__main__":
 
     # file paths
-    resume_path = "data/Resume_sample.pdf"
-    job_path = "data/job_description.txt"
+    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+    resume_path = os.path.join(project_root, "data", "Resume_sample.pdf")
+    job_path = os.path.join(project_root, "data", "job_description.txt")
 
     # extract resume text
     resume_text = extract_resume_text(resume_path)
