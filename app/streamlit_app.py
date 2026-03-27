@@ -1,4 +1,7 @@
 import streamlit as st
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from pdfminer.high_level import extract_text
 from src.preprocess import clean_text
 from src.job_matcher import calculate_similarity
