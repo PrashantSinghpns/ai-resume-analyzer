@@ -49,4 +49,4 @@ if uploaded_resume is not None and job_description:
         st.error("❌ Low match. Consider improving your resume.")
         
     st.markdown("---")
-    st.markdown("Built with ❤️ using Streamlit | AI Resume Analyzer Project")
+    st.markdown("Built with Gen Ai using Streamlit | AI Resume Analyzer Project")
