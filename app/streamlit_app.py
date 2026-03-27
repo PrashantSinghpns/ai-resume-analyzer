@@ -47,3 +47,6 @@ if uploaded_resume is not None and job_description:
         st.warning("⚠️ Average match. Try improving your skills.")
     else:
         st.error("❌ Low match. Consider improving your resume.")
+        
+    st.markdown("---")
+    st.markdown("Built with ❤️ using Streamlit | AI Resume Analyzer Project")
