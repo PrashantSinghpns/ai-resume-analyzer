@@ -34,7 +34,29 @@ Project setup
 Day 2
 Resume PDF text extraction
 
-Day 3
+# 🤖 AI Resume Analyzer
+
+An AI-powered web application that analyzes resumes and compares them with job descriptions using NLP and Machine Learning techniques.
+
+## 🚀 Features
+
+- 📄 Upload Resume (PDF)
+- 🧠 NLP-based text preprocessing
+- 🤖 AI similarity matching using embeddings
+- 📊 Match score (0–100%)
+- 💡 Smart feedback based on match score
+- 🌐 Interactive web app using Streamlit
+
+## 🛠️ Tech Stack
+
+- Python
+- NLP (NLTK)
+- Sentence Transformers
+- Streamlit
+- Scikit-learn
+
+## 📂 Project Structure
+
 Text preprocessing using NLTK
 
 ## How to Run
