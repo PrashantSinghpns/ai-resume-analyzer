@@ -208,4 +208,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-<p align="center">Built with ❤️ using Python & NLP</p>
+<p align="center">Built using Python & NLP</p>
