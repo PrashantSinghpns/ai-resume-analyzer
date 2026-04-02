@@ -2,6 +2,14 @@
 
 > **An intelligent, NLP-powered web application that matches resumes to job descriptions — giving candidates a competitive edge with AI-driven insights.**
 
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=flat-square&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.x-red?style=flat-square&logo=streamlit)
+![NLP](https://img.shields.io/badge/NLP-NLTK-green?style=flat-square)
+![ML](https://img.shields.io/badge/ML-Sentence--Transformers-orange?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
+
+---
+
 ## 📌 Overview
 
 **AI Resume Analyzer** is a machine learning project that bridges the gap between candidates and job opportunities. By leveraging state-of-the-art Natural Language Processing (NLP) and sentence embeddings, it compares a resume against a job description and produces a semantic match score — along with actionable feedback to help candidates tailor their applications.
@@ -127,16 +135,47 @@ User uploads PDF Resume
 
 ---
 
-## 📈 Development Progress
+## 🏁 Project Milestones
 
-| Day | Milestone |
-|---|---|
-| ✅ Day 1 | Project setup and repository structure |
-| ✅ Day 2 | PDF resume text extraction |
-| 🔄 Day 3 | NLP preprocessing pipeline with NLTK |
-| ⏳ Day 4 | Sentence Transformer embeddings integration |
-| ⏳ Day 5 | Similarity scoring and feedback engine |
-| ⏳ Day 6 | Streamlit UI and end-to-end integration |
+### ✅ Milestone 1 — Project Foundation
+> *Laying the groundwork for everything that follows.*
+
+Set up the complete project structure — organized directories for source code, data, models, and notebooks. Configured the Python environment, installed all core dependencies, and initialized the GitHub repository with a clean, scalable architecture ready for development.
+
+---
+
+### ✅ Milestone 2 — Resume Ingestion Engine
+> *The app can now read and understand a PDF resume.*
+
+Built the PDF parsing pipeline that accepts an uploaded resume, extracts raw text content page by page, and handles edge cases like multi-column layouts and embedded fonts. This forms the data entry point of the entire analysis pipeline.
+
+---
+
+### 🔄 Milestone 3 — NLP Preprocessing Pipeline *(In Progress)*
+> *Turning raw text into clean, meaningful data.*
+
+Implementing text preprocessing using NLTK — including tokenization, stopword removal, punctuation stripping, and lemmatization. This step transforms noisy resume and job description text into normalized tokens that the ML model can meaningfully compare.
+
+---
+
+### ⏳ Milestone 4 — Semantic Embedding Layer
+> *Teaching the app to understand meaning, not just words.*
+
+Will integrate Sentence Transformers (`all-MiniLM-L6-v2`) to convert both the resume and job description into high-dimensional semantic vectors. Unlike keyword matching, this approach captures the *meaning* behind phrases — so "built REST APIs" and "developed backend services" register as similar.
+
+---
+
+### ⏳ Milestone 5 — Similarity Scoring & Feedback Engine
+> *Producing the score and telling the user what to improve.*
+
+Will compute cosine similarity between the resume and job description vectors, producing a final match score from 0–100%. A rule-based feedback engine will then generate tailored suggestions — highlighting missing skills, weak sections, and keywords the resume should include.
+
+---
+
+### ⏳ Milestone 6 — Streamlit Web App & End-to-End Integration
+> *Bringing everything together into a usable product.*
+
+Will wire all components into a polished Streamlit interface — resume upload, live score display, visual feedback, and suggestions — making the tool accessible to non-technical users with zero setup required.
 
 ---
 
