@@ -153,7 +153,7 @@ Built the PDF parsing pipeline that accepts an uploaded resume, extracts raw tex
 
 ---
 
-### 🔄 Milestone 3 — NLP Preprocessing Pipeline *(In Progress)*
+### 🔄 Milestone 3 — NLP Preprocessing Pipeline
 > *Turning raw text into clean, meaningful data.*
 
 Implementing text preprocessing using NLTK — including tokenization, stopword removal, punctuation stripping, and lemmatization. This step transforms noisy resume and job description text into normalized tokens that the ML model can meaningfully compare.
